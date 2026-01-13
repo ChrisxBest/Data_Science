@@ -1,5 +1,5 @@
-This repo contains machine learning models and projects and is based on supervised learning.
-1. The focus is set on regression algorithms
+# This repo contains machine learning models and projects and is mainly based on supervised learning.
+# The focus is set on regression algorithms
 2. The focus is set on classification algorithms
 
 In addition to that, outlier detection as part of EDA is beeing added. 
