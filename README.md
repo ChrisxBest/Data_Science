@@ -1,19 +1,48 @@
-# This repository contains machine learning models and projects and is mainly based on supervised learning.
-## 1. The focus is set on regression algorithms like Multiple Linear Regression (MLR)
-## 2. The focus is set on classification algorithms like Decicion Tree (DT), Logarithmic regression (LR) and KNN 
-## 3. Unsupervised Learning like clustering and dimensionality reduction will be added soon.
+## 1. Supervised Machine Learning (`0_Supervised_ML_regression/`, `1_Supervised_ML_classification/`, `4_Supervised_ML_classification_project/`)
 
-## General information rf. ML-Multiple linear regression:
-1. The data points are independent of each other
-2. There is a linear relationship between the feature and the target
-3. The residuals are normally distributed
-4. The residuals have constant variance
-5. The features are independent of each other
+The supervised learning modules cover regression and classification pipelines in **Scikit-learn**, focusing on reproducible data preprocessing, systematic model evaluation, and hyperparameter optimization.
 
-## General Workflow:
-1. EDA + Outlier Detection using RANSAC, DBSCAN or visualization tools like Boxplots etc.
-2. Train-Test-Split of the dataset into feature matrices and target vectors
-3. Choosing and building a baseline model, based on the specific task and the evaluation metrics
-4. Choosing and building additional models, based on the specific task and the evaluation metrics. Instantiate models with specific hyperparameters
-6. Fit model to data (model fitting)
-7. Make predictions with trained models to predict dedicated aim datasets
+### Technical Highlights
+- **End-to-End Preprocessing Pipelines:** Modular feature transformations using `Pipeline` and `ColumnTransformer` to keep preprocessing structured and reproducible.
+- **Hyperparameter Tuning & Evaluation:** Grid search (`GridSearchCV`) evaluated via **ROC-AUC** for imbalanced classification workflows (such as fake account and campaign detection).
+- **Model Benchmarking & Ensembling:** Comparison across KNN, Logistic Regression, Random Forests, Support Vector Machines (SVM), NLP workflows, and ensemble models.
+- **Capstone Classification Project:** End-to-end vehicle defect/quality classification workflow in `0_Bad_cars_detection.ipynb`.
+
+---
+
+## 2. Outlier Detection & Robust Modeling (`2_Outlier Detection/`)
+
+These scripts address noisy real-world datasets by combining anomaly detection with outlier-resistant feature engineering and regression.
+
+### Technical Highlights
+- **Statistical Outlier Detection:** Identification of anomalies and extreme values in `1_Outlier_detection.py`.
+- **Robust Feature Engineering:** Scaling and transformation based on **Median** and **Median Absolute Deviation (MAD)** (`2_Robust_feature_engineering (median & mad).py`).
+- **Outlier-Resistant Regression:** Fitting linear models robust to outliers using **RANSAC** (`3_RANSAC-Regression.py`).
+
+---
+
+## 3. Data Gathering & Web Scraping (`3_Data_gathering/`)
+
+The notebooks in this folder demonstrate programmatic extraction of external web data into structured datasets for downstream analysis.
+
+### Technical Highlights
+- **Webpage Data Retrieval:** Fetching and parsing web content in `0_Retrieving data from Webpage.ipynb`.
+- **Automated Web Scraping:** Structured scraping workflows in `1_Web_scraping.ipynb`.
+
+---
+
+## 4. Distributed Analytics & ML (`5_PySpark/`)
+
+The PySpark notebooks scale data manipulation and machine learning workflows to distributed computing environments with **Apache Spark**.
+
+### Technical Highlights
+- **PySpark DataFrames:** Distributed data transformations and processing in `4_PySpark.ipynb`.
+- **Distributed Logistic Regression:** Classification modeling with **PySpark MLlib** in `5_PySpark_LogReg.ipynb`.
+
+---
+
+## Tech Stack
+- **Languages:** Python, SQL
+- **Machine Learning & Big Data:** Scikit-learn, PySpark (MLlib), Pandas, NumPy
+- **Data Acquisition & Visualization:** Requests, BeautifulSoup, Matplotlib, Seaborn
+- **Version Control & Environment:** Git, GitHub, Jupyter Notebooks, VS Code
