@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints & IPython
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+*secret*
+*credentials*
+
+# Testing, coverage, logs & experiment tracking
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+*.log
+mlruns/
+wandb/
+
+# Local data & model artifacts (uncomment if large files shouldn't be tracked)
+# *.csv
+# *.parquet
+# *.pkl
+# *.joblib
+# *.h5
+# *.pt
+
+# OS & editor files
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
